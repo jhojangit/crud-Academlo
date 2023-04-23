@@ -1,4 +1,4 @@
-import './styles/formUser.css';
+import "./styles/formUser.css";
 import { useEffect } from "react"
 import { useForm } from "react-hook-form"
 import defaultValues from "../utils/defaultValues"
