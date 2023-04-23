@@ -1,0 +1,11 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+header button{
+    width: 140px;
+}
+
+

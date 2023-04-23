@@ -1,7 +1,7 @@
-import "./styles/UserCard.css";
+import "./styles/userCard.css";
 
 
-const UserCard = ({ user, deleteUserById, setUpdateInfo }) => {
+const UserCard = ({ user, deleteUserById, setUpdateInfo, setFormClose }) => {
 
   const handleDelete = () => {
     deleteUserById(user.id)
@@ -9,18 +9,25 @@ const UserCard = ({ user, deleteUserById, setUpdateInfo }) => {
 
   const handleUpdate = () => {
     setUpdateInfo(user)
+    handleOpenForm()
+  }
+
+  const handleOpenForm = () =>{
+    setFormClose(false)
   }
 
   return (
     <article className="user">
       <h2 className="user__name">{user.first_name} {user.last}</h2>
       <ul className="user__list">
-        <li className="user__item"><span className="user__label">Email</span>{user.email}<span className="user__value"></span></li>
-        <li className="user__item"><span className="user__label">Birthday</span>{user.birthday}<span className="user__value"></span></li>
+        <li className="user__item"><span className="user__label">Email</span> <br /> {user.email}<span className="user__value"></span></li>
+        <li className="user__item"><span className="user__label">Birthday</span> <br /> {user.birthday}<span className="user__value"></span></li>
       </ul>
       <footer className="user__footer">
-        <button className="user__btn user__delete" onClick={handleDelete}><i className='bx bx-trash'></i></button>
-        <button className="user__btn user__update" onClick={handleUpdate}><i className='bx bx-edit-alt'></i></button>
+        
+          <button className="user__btn user__delete btn__h" onClick={handleDelete}><i className='bx bx-trash'></i></button>
+          <button  className="user__btn user__update btn__h" onClick={handleUpdate} ><i className='bx bx-edit-alt'></i></button>
+        
       </footer>
     </article>
   )

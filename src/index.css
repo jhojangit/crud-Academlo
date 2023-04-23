@@ -654,7 +654,7 @@ video {
 
 hr {
   border: none;
-  border-top: 1px solid #526980;
+  border-top: 1px solid #665b60;
   border-top: 1px solid var(--border);
 }
 
@@ -819,13 +819,7 @@ dialog::backdrop {
           backdrop-filter: blur(4px);
 }
 
-footer {
-  border-top: 1px solid #526980;
-  border-top: 1px solid var(--border);
-  padding-top: 10px;
-  color: #a9b1ba;
-  color: var(--text-muted);
-}
+
 
 body > footer {
   margin-top: 40px;
