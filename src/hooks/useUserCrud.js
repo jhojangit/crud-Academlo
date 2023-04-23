@@ -31,7 +31,6 @@ const useUserCrud = () => {
         axios.patch(urlUpdate, data)
             .then(res => getAllUsers())
             .catch(err => console.log(err))
-
     }
 
     return {
