@@ -1,4 +1,4 @@
-import "./styles/userCard.css";
+
 
 
 const UserCard = ({ user, deleteUserById, setUpdateInfo, setFormClose }) => {
