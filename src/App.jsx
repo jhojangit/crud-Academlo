@@ -3,17 +3,20 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import './components/delete.css'
 import './components/updateMessage.css'
+import './components/create.css'
 import useUserCrud from './hooks/useUserCrud'
 import UserCard from './components/UserCard'
 import FormUser from './components/FormUser'
 import DeleteMessage from './components/DeleteMessage'
 import UpdateMessage from './components/UpdateMessage'
+import CreateMessage from './components/CreateMessage'
 
 
 function App() {
 
   const [updateInfo, setUpdateInfo] = useState()
   const [formClose, setFormClose] = useState(true);
+  const [createMessage, setCreateMessage] = useState(true);
   const [deleteMessage, setDeleteMessage] = useState(true);
   const [updateMessage, setUpdateMessage] = useState(true);
 
@@ -40,6 +43,7 @@ function App() {
     <div className="App">
 
 
+      {<CreateMessage createMessage={createMessage} />}
       {<DeleteMessage deleteMessage={deleteMessage} />}
       {<UpdateMessage updateMessage={updateMessage} />}
 
@@ -57,6 +61,7 @@ function App() {
         setFormClose={setFormClose}
         formClose={formClose}
         setUpdateMessage={setUpdateMessage}
+        setCreateMessage={setCreateMessage}
       />
       
       <div className='user__container'>
