@@ -1,15 +1,15 @@
 
 import { useEffect, useState } from 'react'
 import './App.css'
-import './components/delete.css'
-import './components/updateMessage.css'
-import './components/create.css'
+import './components/deleteMessage/delete.css'
+import './components/updateMessage/updateMessage.css'
+import './components/createMessage/create.css'
 import useUserCrud from './hooks/useUserCrud'
-import UserCard from './components/UserCard'
-import FormUser from './components/FormUser'
-import DeleteMessage from './components/DeleteMessage'
-import UpdateMessage from './components/UpdateMessage'
-import CreateMessage from './components/CreateMessage'
+import UserCard from './components/userCard/UserCard'
+import FormUser from './components/formUser/FormUser'
+import DeleteMessage from './components/deleteMessage/DeleteMessage'
+import UpdateMessage from './components/updateMessage/UpdateMessage'
+import CreateMessage from './components/createMessage/CreateMessage'
 
 
 function App() {
