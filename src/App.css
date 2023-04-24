@@ -8,4 +8,7 @@ header button{
     width: 140px;
 }
 
+header button:hover{
+    background-color: rgb(49, 70, 88);
+}
 
