@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import { useForm } from "react-hook-form"
 import defaultValues from "../utils/defaultValues"
 
-const FormUser = ({ createNewUser, updateInfo, updateUserById, setUpdateInfo, setFormClose, formClose }) => {
+const FormUser = ({ createNewUser, updateInfo, updateUserById, setUpdateInfo, setFormClose, formClose, setUpdateMessage }) => {
 
   const { register, handleSubmit, reset } = useForm()
 
@@ -18,15 +18,23 @@ const FormUser = ({ createNewUser, updateInfo, updateUserById, setUpdateInfo, se
     if (updateInfo) {
       updateUserById(updateInfo.id, data)
       setUpdateInfo() 
+      updateMs()
     }  else {
       createNewUser(data)
     } 
     reset(defaultValues)
   }
 
+
+  const updateMs = () =>{
+    setUpdateMessage(false)
+    setTimeout(() => {
+      setUpdateMessage(true)
+    }, 3000);
+  }
+
   const handleExit = () => {
     setFormClose(true)
-
   }
 
   return (

@@ -1,17 +1,26 @@
 import "./userCard.css";
 
 
-
-const UserCard = ({ user, deleteUserById, setUpdateInfo, setFormClose }) => {
+const UserCard = ({ user, deleteUserById, setUpdateInfo, setFormClose, setDeleteMessage, }) => {
 
   const handleDelete = () => {
     deleteUserById(user.id)
+    deleteMs()
+  }
+
+  const deleteMs = () =>{
+    setDeleteMessage(false)
+    setTimeout(() => {
+          setDeleteMessage(true)
+    }, 3000);
   }
 
   const handleUpdate = () => {
     setUpdateInfo(user)
     handleOpenForm()
   }
+
+
 
   const handleOpenForm = () =>{
     setFormClose(false)
